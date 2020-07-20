@@ -25,6 +25,16 @@ class ProjectsTableViewController: UITableViewController {
 
         // Save the new items in the Managed Object Context
         store.saveContext()
+        updateDataSource()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+
+        // Save the Managed Object Context
+        store.saveContext()
+        updateDataSource()
+        tableView.reloadData()
     }
     
     func setupNavBar() {
@@ -69,14 +79,6 @@ class ProjectsTableViewController: UITableViewController {
 //        collectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-
-        // Save the Managed Object Context
-        store.saveContext()
-        tableView.reloadData()
-    }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
             let selectedProject = projects[indexPath.row]
@@ -108,6 +110,23 @@ class ProjectsTableViewController: UITableViewController {
 
             default:
                 break
+        }
+    }
+    
+    // populate an array with fetched results on success, or to delete all items from that array on failure
+    private func updateDataSource() {
+        self.store.fetchPersistedData {
+
+            (fetchItemsResult) in
+
+            switch fetchItemsResult {
+            case let .success(projects):
+                self.projects = projects
+            case .failure(_):
+                self.projects.removeAll()
+            }
+            // reload the collection view's data source to present the current data set to the user
+            self.tableView.reloadData()
         }
     }
 }

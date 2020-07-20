@@ -34,7 +34,7 @@ class TaskModel: NSObject, NSCoding {
     // Protocol requires an init method which acts as a decoder for our variables based on the Key
     required init?(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObject(forKey: "name") as! String
-        completed = aDecoder.decodeObject(forKey: "completed") as! Bool
+        completed = aDecoder.decodeObject(forKey: "completed") as? Bool ?? false
         super.init()
     }
 }
