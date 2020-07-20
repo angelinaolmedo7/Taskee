@@ -21,10 +21,19 @@ class AddProjectViewController: UIViewController {
 
         let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelAddProject(_:)))
         navigationItem.leftBarButtonItem = cancelButton
+        
+        let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveProject(_:)))
+        navigationItem.rightBarButtonItem = saveButton
 
     }
     
     @objc func cancelAddProject(_ sender: UIBarButtonItem) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func saveProject(_ sender: UIBarButtonItem) {
+        let mainVC = (self.presentingViewController as! UINavigationController).topViewController as! ProjectsTableViewController
+        mainVC.projects.append(mainVC.createNewProject(name: "New Project"))
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 

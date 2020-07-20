@@ -17,6 +17,14 @@ class ProjectsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        
+        tableView.register(
+                    ProjectTableViewCell.nib,
+                    forCellReuseIdentifier: ProjectTableViewCell.identifier
+        )
+
+        // Save the new items in the Managed Object Context
+        store.saveContext()
     }
     
     func setupNavBar() {
@@ -36,7 +44,15 @@ class ProjectsTableViewController: UITableViewController {
     
     func createNewProject() -> Project {
         let newProject = NSEntityDescription.insertNewObject(forEntityName: "Project", into: store.persistentContainer.viewContext) as! Project
-       return newProject
+        return newProject
+    }
+    
+    func createNewProject(name: String, color: UIColor=UIColor.red) -> Project {
+        let newProject = NSEntityDescription.insertNewObject(forEntityName: "Project", into: store.persistentContainer.viewContext) as! Project
+        newProject.projectName = name
+        newProject.color = color
+        newProject.tasks = TaskModel(name: "Task", completed: false)
+        return newProject
     }
     
     func add(saved project: Project) {
