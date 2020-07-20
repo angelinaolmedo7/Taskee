@@ -98,8 +98,8 @@
 			children = (
 				290D558024BF189500867299 /* Project+CoreDataClass.swift */,
 				290D558124BF189500867299 /* Project+CoreDataProperties.swift */,
-				290D557C24BF131700867299 /* TaskModel.swift */,
 				290D558424BF195900867299 /* ProjectStore.swift */,
+				290D557C24BF131700867299 /* TaskModel.swift */,
 				290D557E24BF154100867299 /* Tasks.swift */,
 			);
 			path = Models;

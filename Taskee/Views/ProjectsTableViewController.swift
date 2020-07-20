@@ -75,8 +75,18 @@ class ProjectsTableViewController: UITableViewController {
     }
     
     func deleteProject(at index: Int) {
+        
+        // Delete the user-selected item from the context
+        let viewContext = store.persistentContainer.viewContext
+        viewContext.delete(projects[index])
+
+        // Delete the user-selected item from the data source
         projects.remove(at: index)
-//        collectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
+//        tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .left)
+//        tableView.reloadData() 
+
+        // Save changes to the Managed Object Context
+        store.saveContext()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

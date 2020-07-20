@@ -28,6 +28,8 @@ class ProjectViewController: UIViewController {
         let backButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(backButtonPressed(_:)))
         navigationItem.leftBarButtonItem = backButton
         
+        print(projectToDisplay.tasks)
+        
     }
 
     private func updateUI() {
