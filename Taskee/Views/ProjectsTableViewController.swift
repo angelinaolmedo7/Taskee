@@ -61,11 +61,11 @@ class ProjectsTableViewController: UITableViewController {
         let newProject = NSEntityDescription.insertNewObject(forEntityName: "Project", into: store.persistentContainer.viewContext) as! Project
         newProject.projectName = name
         newProject.color = color
-        newProject.tasks = TaskModel(name: "Task", completed: false)
+        newProject.tasks = Tasks(tasks: nil)
         return newProject
     }
     
-    func add(saved project: Project) {
+    func add(saved project: Project) { // dont think i actually use this
         projects.insert(project, at: 0)
 //        collectionView.insertItems(at: [IndexPath(row: 0, section: 0)])
     }

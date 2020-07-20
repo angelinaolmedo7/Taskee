@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTaskViewController" customModule="Taskee" customModuleProvider="target">
+            <connections>
+                <outlet property="dueDatePicker" destination="Ddz-sJ-D9h" id="vyI-Pf-Uzh"/>
+                <outlet property="taskNameTextField" destination="qu4-Qp-ADk" id="uEh-as-2Wd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name your new task:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyL-g6-L4v">
+                    <rect key="frame" x="30" y="74" width="354" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qu4-Qp-ADk">
+                    <rect key="frame" x="30" y="115" width="354" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ddz-sJ-D9h">
+                    <rect key="frame" x="20" y="230" width="374" height="216"/>
+                </datePicker>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1D-Bx-c8R">
+                    <rect key="frame" x="30" y="179" width="354" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ddz-sJ-D9h" secondAttribute="trailing" constant="20" id="A1g-iv-klK"/>
+                <constraint firstItem="qu4-Qp-ADk" firstAttribute="top" secondItem="qyL-g6-L4v" secondAttribute="bottom" constant="20" id="DHP-cS-nbP"/>
+                <constraint firstItem="qyL-g6-L4v" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Dqu-up-vao"/>
+                <constraint firstItem="qu4-Qp-ADk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="K3l-zt-PKo"/>
+                <constraint firstItem="Ddz-sJ-D9h" firstAttribute="top" secondItem="F1D-Bx-c8R" secondAttribute="bottom" constant="30" id="N4T-km-KZ7"/>
+                <constraint firstItem="F1D-Bx-c8R" firstAttribute="top" secondItem="qu4-Qp-ADk" secondAttribute="bottom" constant="30" id="NCM-Td-3jc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qu4-Qp-ADk" secondAttribute="trailing" constant="30" id="Xgg-Nf-JdS"/>
+                <constraint firstItem="qyL-g6-L4v" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="XxR-1E-yMc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qyL-g6-L4v" secondAttribute="trailing" constant="30" id="doJ-We-4ZV"/>
+                <constraint firstItem="Ddz-sJ-D9h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="iYS-Wi-6h1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F1D-Bx-c8R" secondAttribute="trailing" constant="30" id="jze-Bs-Xpv"/>
+                <constraint firstItem="F1D-Bx-c8R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="ldw-Ms-3xR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-277" y="14"/>
+        </view>
+    </objects>
+</document>

@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="ProjectTitleLabel" destination="klg-rx-7lR" id="oac-JU-2Fh"/>
                 <outlet property="colorView" destination="IlQ-fD-vbI" id="taq-N0-750"/>
+                <outlet property="tasksTable" destination="tLN-zy-IQz" id="qyn-VK-Yax"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
