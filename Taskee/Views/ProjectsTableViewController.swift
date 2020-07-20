@@ -81,7 +81,13 @@ class ProjectsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-            let selectedProject = projects[indexPath.row]
+        let selectedProject = projects[indexPath.row]
+        
+        let projectDetailVC = ProjectViewController.instantiate()
+        projectDetailVC.projectToDisplay = selectedProject
+        let navigationController = UINavigationController(rootViewController: projectDetailVC)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
 //            let projectDetailVC = ProjectDetailViewController.instantiate()
 //            projectDetailVC.project = selectedProject
 //            projectDetailVC.projectIndex = indexPath.row
