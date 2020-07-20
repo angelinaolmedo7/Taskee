@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		290D556524BF100600867299 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D556424BF100600867299 /* AppDelegate.swift */; };
 		290D556724BF100600867299 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D556624BF100600867299 /* SceneDelegate.swift */; };
-		290D556924BF100600867299 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D556824BF100600867299 /* ViewController.swift */; };
+		290D556924BF100600867299 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D556824BF100600867299 /* ProjectsTableViewController.swift */; };
 		290D556C24BF100600867299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290D556A24BF100600867299 /* Main.storyboard */; };
 		290D556F24BF100600867299 /* Taskee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 290D556D24BF100600867299 /* Taskee.xcdatamodeld */; };
 		290D557124BF100A00867299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 290D557024BF100A00867299 /* Assets.xcassets */; };
@@ -19,13 +19,17 @@
 		290D558224BF189500867299 /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D558024BF189500867299 /* Project+CoreDataClass.swift */; };
 		290D558324BF189500867299 /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D558124BF189500867299 /* Project+CoreDataProperties.swift */; };
 		290D558524BF195900867299 /* ProjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290D558424BF195900867299 /* ProjectStore.swift */; };
+		29F34A5024C4D7F8003641AA /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F34A4E24C4D7F8003641AA /* ProjectTableViewCell.swift */; };
+		29F34A5124C4D7F8003641AA /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F34A4F24C4D7F8003641AA /* ProjectTableViewCell.xib */; };
+		29F34A5424C548C4003641AA /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F34A5224C548C4003641AA /* AddProjectViewController.swift */; };
+		29F34A5524C548C4003641AA /* AddProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F34A5324C548C4003641AA /* AddProjectViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		290D556124BF100600867299 /* Taskee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taskee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		290D556424BF100600867299 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		290D556624BF100600867299 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		290D556824BF100600867299 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		290D556824BF100600867299 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		290D556B24BF100600867299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		290D556E24BF100600867299 /* Taskee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Taskee.xcdatamodel; sourceTree = "<group>"; };
 		290D557024BF100A00867299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		290D558024BF189500867299 /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
 		290D558124BF189500867299 /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		290D558424BF195900867299 /* ProjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectStore.swift; sourceTree = "<group>"; };
+		29F34A4E24C4D7F8003641AA /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		29F34A4F24C4D7F8003641AA /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
+		29F34A5224C548C4003641AA /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		29F34A5324C548C4003641AA /* AddProjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProjectViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +78,8 @@
 			children = (
 				290D556424BF100600867299 /* AppDelegate.swift */,
 				290D557B24BF12E800867299 /* Models */,
+				29F34A4D24C4D7D7003641AA /* Views */,
 				290D556624BF100600867299 /* SceneDelegate.swift */,
-				290D556824BF100600867299 /* ViewController.swift */,
 				290D556A24BF100600867299 /* Main.storyboard */,
 				290D557024BF100A00867299 /* Assets.xcassets */,
 				290D557224BF100A00867299 /* LaunchScreen.storyboard */,
@@ -91,6 +99,18 @@
 				290D557E24BF154100867299 /* Tasks.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		29F34A4D24C4D7D7003641AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				29F34A4E24C4D7F8003641AA /* ProjectTableViewCell.swift */,
+				29F34A4F24C4D7F8003641AA /* ProjectTableViewCell.xib */,
+				29F34A5224C548C4003641AA /* AddProjectViewController.swift */,
+				29F34A5324C548C4003641AA /* AddProjectViewController.xib */,
+				290D556824BF100600867299 /* ProjectsTableViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +174,8 @@
 				290D557424BF100A00867299 /* LaunchScreen.storyboard in Resources */,
 				290D557124BF100A00867299 /* Assets.xcassets in Resources */,
 				290D556C24BF100600867299 /* Main.storyboard in Resources */,
+				29F34A5524C548C4003641AA /* AddProjectViewController.xib in Resources */,
+				29F34A5124C4D7F8003641AA /* ProjectTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,10 +187,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				290D556F24BF100600867299 /* Taskee.xcdatamodeld in Sources */,
-				290D556924BF100600867299 /* ViewController.swift in Sources */,
+				290D556924BF100600867299 /* ProjectsTableViewController.swift in Sources */,
 				290D558324BF189500867299 /* Project+CoreDataProperties.swift in Sources */,
+				29F34A5424C548C4003641AA /* AddProjectViewController.swift in Sources */,
 				290D557D24BF131700867299 /* TaskModel.swift in Sources */,
 				290D558224BF189500867299 /* Project+CoreDataClass.swift in Sources */,
+				29F34A5024C4D7F8003641AA /* ProjectTableViewCell.swift in Sources */,
 				290D556524BF100600867299 /* AppDelegate.swift in Sources */,
 				290D557F24BF154100867299 /* Tasks.swift in Sources */,
 				290D558524BF195900867299 /* ProjectStore.swift in Sources */,
