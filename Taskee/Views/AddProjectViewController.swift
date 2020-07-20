@@ -10,6 +10,9 @@ import UIKit
 
 class AddProjectViewController: UIViewController {
 
+    @IBOutlet weak var nameTextBox: UITextField!
+    @IBOutlet weak var colorPicker: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
@@ -33,7 +36,7 @@ class AddProjectViewController: UIViewController {
     
     @objc func saveProject(_ sender: UIBarButtonItem) {
         let mainVC = (self.presentingViewController as! UINavigationController).topViewController as! ProjectsTableViewController
-        mainVC.projects.append(mainVC.createNewProject(name: "New Project"))
+        mainVC.projects.append(mainVC.createNewProject(name: nameTextBox.text ?? "New Project"))
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 

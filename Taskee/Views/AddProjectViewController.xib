@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddProjectViewController" customModule="Taskee" customModuleProvider="target">
             <connections>
+                <outlet property="colorPicker" destination="exT-PB-ODs" id="s5Q-JB-aMx"/>
+                <outlet property="nameTextBox" destination="2VR-zs-xKw" id="7bU-Np-xkC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,8 +25,25 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKv-oY-4nf">
+                    <rect key="frame" x="30" y="169" width="93.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="exT-PB-ODs">
+                    <rect key="frame" x="30" y="200" width="354" height="32"/>
+                    <segments>
+                        <segment title="Red"/>
+                        <segment title="Orange"/>
+                        <segment title="Yellow"/>
+                        <segment title="Green"/>
+                        <segment title="Blue"/>
+                        <segment title="Purple"/>
+                    </segments>
+                </segmentedControl>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2VR-zs-xKw">
-                    <rect key="frame" x="30" y="125" width="250" height="34"/>
+                    <rect key="frame" x="30" y="105" width="250" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="puA-d4-bnG"/>
                     </constraints>
@@ -35,9 +54,14 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Rst-2U-h64" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="3LR-zG-aui"/>
-                <constraint firstItem="2VR-zs-xKw" firstAttribute="top" secondItem="Rst-2U-h64" secondAttribute="bottom" constant="30" id="CVV-tw-1jO"/>
+                <constraint firstItem="wKv-oY-4nf" firstAttribute="top" secondItem="2VR-zs-xKw" secondAttribute="bottom" constant="30" id="72P-kE-4L2"/>
+                <constraint firstItem="2VR-zs-xKw" firstAttribute="top" secondItem="Rst-2U-h64" secondAttribute="bottom" constant="10" id="CVV-tw-1jO"/>
+                <constraint firstItem="exT-PB-ODs" firstAttribute="top" secondItem="wKv-oY-4nf" secondAttribute="bottom" constant="10" id="D2T-58-Jbe"/>
+                <constraint firstItem="exT-PB-ODs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="E15-SW-Iaf"/>
+                <constraint firstItem="wKv-oY-4nf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="GLZ-Kc-bBa"/>
                 <constraint firstItem="2VR-zs-xKw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="iyP-cW-aJp"/>
                 <constraint firstItem="Rst-2U-h64" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="wBt-hK-NMQ"/>
+                <constraint firstItem="exT-PB-ODs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="woz-tm-YaX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
